@@ -1,12 +1,11 @@
-package com.notegg.viewmodelexample.viewModel
+package com.eitu.viewmodelexample.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.notegg.viewmodelexample.DaumSearchDocument
-import com.notegg.viewmodelexample.SearchItem
-import com.notegg.viewmodelexample.viewModel.hilt.Repository
-import com.notegg.viewmodelexample.viewModel.hilt.Result
+import com.eitu.viewmodelexample.DaumSearchDocument
+import com.eitu.viewmodelexample.viewModel.hilt.Repository
+import com.eitu.viewmodelexample.viewModel.hilt.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,17 +15,14 @@ import javax.inject.Inject
 @HiltViewModel
 class MyViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
-    //private val context : Context get() = getApplication<Application>().applicationContext
-
     val query = MutableLiveData("")
 
-    val searchResult = MutableLiveData<List<DaumSearchDocument>>(mutableListOf())
+    val searchResult = MutableLiveData<List<DaumSearchDocument>>(emptyList())
 
     fun getData() {
         //TODO - query를 검색어로 이미지 검색을 실행
         val queryString : String? = query.value
         if (queryString != null) {
-            //Toast.makeText(context, "검색어 : ${queryString}", Toast.LENGTH_SHORT).show()
             viewModelScope.launch {
                 val response = withContext(Dispatchers.IO) {
                     repository.getData(queryString, 1)
@@ -37,6 +33,9 @@ class MyViewModel @Inject constructor(private val repository: Repository) : View
                     }
                     is Result.Error -> {
                         response.exception.printStackTrace()
+                    }
+                    else -> {
+
                     }
                 }
             }

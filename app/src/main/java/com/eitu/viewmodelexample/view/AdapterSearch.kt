@@ -1,13 +1,12 @@
-package com.notegg.viewmodelexample.view
+package com.eitu.viewmodelexample.view
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.notegg.viewmodelexample.DaumSearchDocument
-import com.notegg.viewmodelexample.SearchItem
-import com.notegg.viewmodelexample.databinding.ItemRecyclerSearchBinding
+import com.eitu.viewmodelexample.DaumSearchDocument
+import com.eitu.viewmodelexample.databinding.ItemRecyclerSearchBinding
 
 class AdapterSearch : RecyclerView.Adapter<AdapterSearch.Holder>() {
 

@@ -1,6 +1,7 @@
-package com.notegg.viewmodelexample.viewModel.hilt
+package com.eitu.viewmodelexample.viewModel.hilt
 
-import com.notegg.viewmodelexample.DaumSearchResponse
+import com.eitu.viewmodelexample.DaumSearchResponse
+import com.eitu.viewmodelexample.viewModel.Api
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -8,7 +9,7 @@ class Repository @Inject constructor(private val api : Api) {
 
     private fun<T> returnResult(response: Response<T>) : Result<T> {
         return try {
-            if (response.code() in 200 until 300) {
+            if (response.isSuccessful) {
                 val body = response.body()
                 if (body != null) {
                     Result.Success(body)

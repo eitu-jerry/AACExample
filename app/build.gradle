@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.notegg.viewmodelexample'
+    namespace 'com.eitu.viewmodelexample'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.notegg.viewmodelexample"
+        applicationId "com.eitu.viewmodelexample"
         minSdk 26
         targetSdk 33
         versionCode 1

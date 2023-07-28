@@ -1,4 +1,4 @@
-package com.notegg.viewmodelexample
+package com.eitu.viewmodelexample
 
 import com.google.gson.annotations.SerializedName
 

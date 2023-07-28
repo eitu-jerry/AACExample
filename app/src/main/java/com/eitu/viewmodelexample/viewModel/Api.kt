@@ -1,6 +1,6 @@
-package com.notegg.viewmodelexample.viewModel.hilt
+package com.eitu.viewmodelexample.viewModel
 
-import com.notegg.viewmodelexample.DaumSearchResponse
+import com.eitu.viewmodelexample.DaumSearchResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

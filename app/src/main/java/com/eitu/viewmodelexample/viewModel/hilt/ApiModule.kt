@@ -1,5 +1,6 @@
-package com.notegg.viewmodelexample.viewModel.hilt
+package com.eitu.viewmodelexample.viewModel.hilt
 
+import com.eitu.viewmodelexample.viewModel.Api
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent

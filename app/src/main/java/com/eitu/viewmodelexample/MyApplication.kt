@@ -1,4 +1,4 @@
-package com.notegg.viewmodelexample
+package com.eitu.viewmodelexample
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
@@ -9,4 +9,5 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
     }
+
 }

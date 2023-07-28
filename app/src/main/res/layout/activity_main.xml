@@ -3,7 +3,7 @@
     <data>
         <variable
             name="myViewModel"
-            type="com.notegg.viewmodelexample.viewModel.MyViewModel" />
+            type="com.eitu.viewmodelexample.viewModel.MyViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
