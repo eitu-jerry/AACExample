@@ -1,4 +1,6 @@
 # EituImageSearcher
+## 개발 과정과 기술에 대한 설명은 블로그를 통해 확인하실 수 있어요
+[E.I.T.U](https://eitu97.tistory.com)
 ## 이런 기술을 적용하고 있어요 (23.07.28 기준)
 * Hilt
 * DataBinding
